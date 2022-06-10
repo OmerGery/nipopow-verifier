@@ -7,7 +7,7 @@ const network = axios.create({
     baseURL: 'https://mainnet.infura.io',
   }); 
 describe('Test', () => {
-    it('Logger test', async() => {
+    it('Can get contract block number', async() => {
       const { data } = await network.post(`/v3/${projectId}`,{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1} );
       console.log(data);
       expect(data).toBeDefined();

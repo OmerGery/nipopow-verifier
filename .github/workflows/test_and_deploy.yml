@@ -25,7 +25,7 @@ jobs:
           MNEMONIC: ${{secrets.MNEMONIC}}
           PROJECT_ID: ${{secrets.PROJECT_ID}}
 
-      # - name: test
-      #   run: node 
+      - name: test
+        run: npm test 
 
         

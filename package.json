@@ -24,5 +24,8 @@
     "@truffle/hdwallet-provider": "^2.0.9",
     "axios": "^0.27.2",
     "dotenv": "^16.0.1"
+  },
+  "devDependencies": {
+    "jest": "^28.1.1"
   }
 }

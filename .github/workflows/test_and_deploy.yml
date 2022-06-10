@@ -2,7 +2,7 @@ name: Test And Deploy
 on: 
   push:
 jobs:
-  build:
+  test_deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

@@ -15,7 +15,7 @@ jobs:
 
       - name: setup
         run: |
-          echo ${{secrets.DEPLOY_CREDENTIALS}} > .secrets.json
+          echo ֿ"${{secrets.DEPLOY_CREDENTIALS}}" > .secrets.json
           npm i
           npm i -g truffle
 

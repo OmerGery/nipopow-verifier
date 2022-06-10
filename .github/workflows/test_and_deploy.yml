@@ -18,7 +18,9 @@ jobs:
           node-version: 16
 
       - name: install dependencies
-        run: npm i
+        run: |
+          npm i
+          npm i -g truffle
 
       - name: deploy
         run: truffle migrate --network kovan

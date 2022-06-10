@@ -15,9 +15,11 @@ jobs:
 
       - name: setup
         run: |
-          echo ֿ'${{secrets.DEPLOY_CREDENTIALS}}' > .secrets.json
           npm i
           npm i -g truffle
+        env: 
+          MNEMONIC: ${{secrets.MNEMONIC}}
+          PROJECT_ID: ${{secrets.PROJECT_ID}}
 
       - name: deploy
         run: truffle migrate --network kovan

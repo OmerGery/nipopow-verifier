@@ -1,0 +1,20 @@
+name: Test And Deploy
+on: 
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: setup
+        run: |
+        echo {{secrets.CREDENTIALS}} > .secrets.json
+        npm i
+        install -g truffle
+
+      - name: deploy
+        run: truffle migrate --network kovan
+
+        

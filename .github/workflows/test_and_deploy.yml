@@ -1,6 +1,10 @@
 name: Test And Deploy
 on: 
   push:
+
+env: 
+    MNEMONIC: ${{secrets.MNEMONIC}}
+    PROJECT_ID: ${{secrets.PROJECT_ID}}
 jobs:
   test_deploy:
     runs-on: ubuntu-latest
@@ -13,17 +17,12 @@ jobs:
         with:
           node-version: 16
 
-      - name: setup
-        run: |
-          npm i
-          npm i -g truffle
-
+      - name: install dependencies
+        run: npm i
 
       - name: deploy
         run: truffle migrate --network kovan
-        env: 
-          MNEMONIC: ${{secrets.MNEMONIC}}
-          PROJECT_ID: ${{secrets.PROJECT_ID}}
+
 
       - name: test
         run: npm test 

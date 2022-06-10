@@ -26,6 +26,7 @@
     "dotenv": "^16.0.1"
   },
   "devDependencies": {
-    "jest": "^28.1.1"
+    "jest": "^28.1.1",
+    "truffle": "^5.5.18"
   }
 }

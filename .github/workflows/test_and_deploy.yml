@@ -17,7 +17,7 @@ jobs:
         run: |
           echo {{secrets.DEPLOY_CREDENTIALS}} > .secrets.json
           npm i
-          install -g truffle
+          npm i -g truffle
 
       - name: deploy
         run: truffle migrate --network kovan

@@ -27,8 +27,6 @@ jobs:
 
 
       - name: test
-        run: |
-          truffle test
-          npm test 
+        run: npm test 
 
         

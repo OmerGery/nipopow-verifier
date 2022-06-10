@@ -6,3 +6,6 @@
 /thesis/thesis.bbl
 /thesis/thesis.blg
 /thesis/thesis.out
+.secrets.json
+node_modules
+build

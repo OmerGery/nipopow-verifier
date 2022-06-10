@@ -1,0 +1,26 @@
+{
+  "name": "nipopow-verifier",
+  "version": "1.0.0",
+  "description": "https://eprint.iacr.org/2020/927.pdf",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmerGery/nipopow-verifier.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OmerGery/nipopow-verifier/issues"
+  },
+  "homepage": "https://github.com/OmerGery/nipopow-verifier#readme",
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^2.0.9"
+  }
+}

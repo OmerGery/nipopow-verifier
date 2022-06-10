@@ -7,5 +7,6 @@
 /thesis/thesis.blg
 /thesis/thesis.out
 .secrets.json
+.env
 node_modules
 build

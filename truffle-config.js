@@ -1,15 +1,15 @@
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 const fs = require("fs");
-const secrets = JSON.parse(fs.readFileSync(".secrets.json").toString().trim());
-
+require('dotenv').config();
+const { MNEMONIC, PROJECT_ID } = process.env;
 module.exports = {
     networks: {
         kovan: {
             networkCheckTimeout: 10000,
             provider: () => {
                return new HDWalletProvider(
-                 secrets.mnemonic,
-                 `wss://kovan.infura.io/ws/v3/${secrets.projectId}`
+                MNEMONIC,
+                 `wss://kovan.infura.io/ws/v3/${PROJECT_ID}`
                );
             },
             network_id: "42",

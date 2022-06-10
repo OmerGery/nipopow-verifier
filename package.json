@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/OmerGery/nipopow-verifier#readme",
   "dependencies": {
-    "@truffle/hdwallet-provider": "^2.0.9"
+    "@truffle/hdwallet-provider": "^2.0.9",
+    "dotenv": "^16.0.1"
   }
 }

@@ -12,21 +12,41 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.7.7'
+
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
           node-version: 16
 
-      - name: install dependencies
+      - name: install node dependencies
         run: |
           npm i
           npm i -g truffle
+          npm i -g ganache-cli
 
+      - name: install python dependencies
+        run: |
+          pip install pytest
+          pip install web3
+          pip install solcx
+          pip install bitcoin
+          pip install python-bitcoinlib
+          
       - name: deploy
         run: truffle migrate --network kovan
 
 
-      - name: test
+      - name: Basic Smoke test
         run: npm test 
+
+      - name: Test storage vs memory
+      - name: run ganache backend server
+          ganache-cli -p 7545 &
+          cd tests 
+          pytest -v -s storage_vs_memory.py
+          
 
         

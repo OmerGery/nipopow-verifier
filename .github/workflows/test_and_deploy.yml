@@ -47,6 +47,7 @@ jobs:
         run: |
           ganache-cli -p 7545 &
           cd tests 
+          sleep 5
           pytest -v -s storage_vs_memory.py
           
 

@@ -7,7 +7,7 @@ env:
     PROJECT_ID: ${{secrets.PROJECT_ID}}
 jobs:
   test_deploy:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2

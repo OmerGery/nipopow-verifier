@@ -31,7 +31,7 @@ jobs:
         run: |
           pip install pytest
           pip install web3
-          pip install solcx
+          pip install py-solc-x
           pip install bitcoin
           pip install python-bitcoinlib 
           

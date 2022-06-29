@@ -12,7 +12,7 @@ jobs:
     steps:
         
         - name: check
-          run: exit 125 || echo "hello"
+          run: exit 125 && echo "hello"
       # - name: Checkout
       #   uses: actions/checkout@v2
 

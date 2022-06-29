@@ -34,6 +34,7 @@ jobs:
           pip install py-solc-x
           pip install bitcoin
           pip install python-bitcoinlib 
+          pip install tqdm
           
       - name: deploy
         run: truffle migrate --network kovan

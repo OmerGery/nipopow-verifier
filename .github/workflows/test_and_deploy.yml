@@ -5,10 +5,10 @@ on:
 env: 
     MNEMONIC: ${{secrets.MNEMONIC}}
     PROJECT_ID: ${{secrets.PROJECT_ID}}
-jobs:
-  continue-on-error: true
+jobs:  
   test_deploy:
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
         
         - name: check

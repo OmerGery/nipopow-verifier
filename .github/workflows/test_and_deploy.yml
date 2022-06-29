@@ -44,6 +44,7 @@ jobs:
 
       - name: Test storage vs memory
       - name: run ganache backend server
+        run: |
           ganache-cli -p 7545 &
           cd tests 
           pytest -v -s storage_vs_memory.py

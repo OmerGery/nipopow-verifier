@@ -33,7 +33,7 @@ jobs:
           pip install web3
           pip install solcx
           pip install bitcoin
-          pip install python-bitcoinlib
+          pip install python-bitcoinlib 
           
       - name: deploy
         run: truffle migrate --network kovan
